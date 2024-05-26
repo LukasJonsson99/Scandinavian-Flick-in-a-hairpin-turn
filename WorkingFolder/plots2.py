@@ -1,3 +1,4 @@
+# Plot file to plot 2 saved solutions from the same vehicle model. 
 # %%
 import os
 import numpy as np

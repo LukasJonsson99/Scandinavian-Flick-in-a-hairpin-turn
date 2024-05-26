@@ -1,3 +1,5 @@
+# Plot file to plot all 3 models at the same time. Uses the saved solution. 
+
 # %%
 import os
 import numpy as np

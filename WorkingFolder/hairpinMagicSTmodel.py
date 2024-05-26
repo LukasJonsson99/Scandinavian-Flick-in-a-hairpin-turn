@@ -1,3 +1,29 @@
+#
+#     MIT No Attribution
+#
+#     Copyright (C) 2010-2023 Joel Andersson, Joris Gillis, Moritz Diehl, KU Leuven.
+#
+#     Permission is hereby granted, free of charge, to any person obtaining a copy of this
+#     software and associated documentation files (the "Software"), to deal in the Software
+#     without restriction, including without limitation the rights to use, copy, modify,
+#     merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+#     permit persons to whom the Software is furnished to do so.
+#
+#     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+#     INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+#     PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+#     HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+#     OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+#     SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+#
+
+
+# Run file for the magic formula tire model. Use the read_from_file variable to be able to use the saved
+# as a guess for current problem. Use the actual_car_size variable to use the set width and length of
+# the car, otherwise a point at the center of mass is used. Set the friction variable to the wanted 
+# friction. 
+
+
 # %%
 import os
 import numpy as np
@@ -16,10 +42,10 @@ actual_car_size = True #Use the car length and width otherwise it is seen as a p
 friction = "dry" #Friction used
 
 #Elipse constants
-R1 = 52 #diff from obstacle 1 center in x
-R2 = 1 #height of obstacle 1
+R1 = 10 #diff from obstacle 1 center in x
+R2 = 5 #height of obstacle 1
 R3 = 60 #diff from obstacle 2 center in x
-R4 = 4 #height of obstacle 2
+R4 = 10 #height of obstacle 2
 obstacle_center_x = 0 #OBSTACLE CENTER X
 obstacle_center_y = 0 #OBSTACLE CENTER Y
 road_width = R4-R2
